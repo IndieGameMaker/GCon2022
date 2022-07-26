@@ -22,6 +22,7 @@ public class PlayerCtrl : MonoBehaviour
         // 벡터의 덧셈 연산
         Vector3 moveDir = (Vector3.forward * v) + (Vector3.right * h);
 
-        transform.Translate(moveDir * 0.01f);
+        // 벡터의 크기를 정규화
+        transform.Translate(moveDir.normalized * Time.deltaTime * 8.0f);
     }
 }

@@ -32,9 +32,9 @@ public class PlayerCtrl : MonoBehaviour
         Vector3 moveDir = (Vector3.forward * v) + (Vector3.right * h);
 
         // 벡터의 크기를 정규화 - 이동처리
-        transform.Translate(moveDir.normalized * Time.deltaTime * moveSpeed);
+        tr.Translate(moveDir.normalized * Time.deltaTime * moveSpeed);
         // 회전 처리
-        transform.Rotate(Vector3.up * Time.deltaTime * r * turnSpeed);
+        tr.Rotate(Vector3.up * Time.deltaTime * r * turnSpeed);
 
     }
 }

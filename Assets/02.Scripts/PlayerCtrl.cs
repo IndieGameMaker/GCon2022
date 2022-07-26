@@ -12,10 +12,13 @@ public class PlayerCtrl : MonoBehaviour
     public float moveSpeed = 8.0f;
     public float turnSpeed = 100.0f;
 
+    // 컴포넌트 캐시 처리할 변수를 선언
+    private Transform tr;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        tr = GetComponent<Transform>();
     }
 
     // Update is called once per frame

@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class BulletCtrl : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private Rigidbody rb;
+
     void Start()
     {
-
+        rb = GetComponent<Rigidbody>();
+        rb.AddRelativeForce(Vector3.forward * 800.0f);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

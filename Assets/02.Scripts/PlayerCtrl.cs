@@ -7,6 +7,7 @@ public class PlayerCtrl : MonoBehaviour
     private float v;
     private float h;
 
+    [Range(3.0f, 8.0f)]
     public float moveSpeed = 8.0f;
 
     // Start is called before the first frame update

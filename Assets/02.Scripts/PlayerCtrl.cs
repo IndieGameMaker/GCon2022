@@ -7,6 +7,8 @@ public class PlayerCtrl : MonoBehaviour
     private float v;
     private float h;
 
+    public float moveSpeed = 8.0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,6 @@ public class PlayerCtrl : MonoBehaviour
         Vector3 moveDir = (Vector3.forward * v) + (Vector3.right * h);
 
         // 벡터의 크기를 정규화
-        transform.Translate(moveDir.normalized * Time.deltaTime * 8.0f);
+        transform.Translate(moveDir.normalized * Time.deltaTime * moveSpeed);
     }
 }

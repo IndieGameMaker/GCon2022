@@ -13,7 +13,6 @@ public class PlayerCtrl : MonoBehaviour
     public float turnSpeed = 100.0f;
 
     // 컴포넌트 캐시 처리할 변수를 선언
-    [SerializeField]
     private Transform tr;
 
     // Start is called before the first frame update

@@ -14,11 +14,15 @@ public class PlayerCtrl : MonoBehaviour
 
     // 컴포넌트 캐시 처리할 변수를 선언
     private Transform tr;
+    private Animation anim;
 
     // Start is called before the first frame update
     void Start()
     {
         tr = GetComponent<Transform>();
+        anim = GetComponent<Animation>();
+
+        anim.Play("Idle");
     }
 
     // Update is called once per frame

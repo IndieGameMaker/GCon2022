@@ -26,7 +26,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 7116
+  controlID: 11778
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -252,9 +252,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 0, z: 0}
+    m_Target: {x: -0.004197657, y: 0.94198984, z: 0.00189659}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0}
+    m_Value: {x: -0.004197657, y: 0.94198984, z: 0.00189659}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -301,13 +301,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.31132445, y: 0.32361615, z: -0.113663614, w: -0.88625747}
+    m_Target: {x: -0.2707165, y: 0.30700073, z: -0.09153431, w: -0.90780425}
     speed: 2
-    m_Value: {x: -0.31132102, y: 0.3236126, z: -0.11366237, w: -0.88624775}
+    m_Value: {x: -0.27071327, y: 0.30699706, z: -0.09153322, w: -0.9077934}
   m_Size:
-    m_Target: 0.9002976
+    m_Target: 1.3098503
     speed: 2
-    m_Value: 0.8916044
+    m_Value: 1.3098503
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -331,7 +331,7 @@ MonoBehaviour:
   m_ReplacementString: 
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
-  m_ViewIsLockedToObject: 0
+  m_ViewIsLockedToObject: 1
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -356,7 +356,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 7117
+  controlID: 11779
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -666,7 +666,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: a66d0000
     m_LastClickedID: 28070
-    m_ExpandedIDs: e0acffffffffffff00000000a66d00003e6f0000426f0000fe700000107100006871000006720000
+    m_ExpandedIDs: e0acffffffffffff00000000a66d00003e6f0000fe70000010710000687100000672000010740000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -697,18 +697,18 @@ MonoBehaviour:
     m_ExpandedIDs: e0acffffffffffff00000000a66d00003e6f0000fe70000010710000687100000672000010740000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: PlayerCtrl
-      m_OriginalName: PlayerCtrl
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 30906
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 9}
     m_SearchString: 

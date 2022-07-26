@@ -6,9 +6,11 @@ public class PlayerCtrl : MonoBehaviour
 {
     private float v;
     private float h;
+    private float r;
 
     [Range(3.0f, 8.0f)]
     public float moveSpeed = 8.0f;
+    public float turnSpeed = 100.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -21,11 +23,15 @@ public class PlayerCtrl : MonoBehaviour
     {
         v = Input.GetAxis("Vertical");   // Up/Down     -1.0f ~ 0.0f ~ +1.0f
         h = Input.GetAxis("Horizontal"); // Left/Right  -1.0f ~ 0.0f ~ +1.0f
+        r = Input.GetAxis("Mouse X");    // 
 
         // 벡터의 덧셈 연산
         Vector3 moveDir = (Vector3.forward * v) + (Vector3.right * h);
 
-        // 벡터의 크기를 정규화
+        // 벡터의 크기를 정규화 - 이동처리
         transform.Translate(moveDir.normalized * Time.deltaTime * moveSpeed);
+        // 회전 처리
+        transform.Rotate(Vector3.up * Time.deltaTime * r * turnSpeed);
+
     }
 }

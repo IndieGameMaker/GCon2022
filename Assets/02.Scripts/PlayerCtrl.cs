@@ -40,5 +40,30 @@ public class PlayerCtrl : MonoBehaviour
         // 회전 처리
         tr.Rotate(Vector3.up * Time.deltaTime * r * turnSpeed);
 
+        PlayerAnimation();
+    }
+
+    void PlayerAnimation()
+    {
+        if (v >= 0.1f)              // 전진
+        {
+            anim.CrossFade("RunF", 0.3f);
+        }
+        else if (v <= -0.1f)        // 후진
+        {
+            anim.CrossFade("RunB", 0.3f);
+        }
+        else if (h >= 0.1f)         // 오른쪽 이동
+        {
+            anim.CrossFade("RunR", 0.3f);
+        }
+        else if (h <= -0.1f)        // 왼쪽 이동
+        {
+            anim.CrossFade("RunL", 0.3f);
+        }
+        else                        // Idling...
+        {
+            anim.CrossFade("Idle", 0.3f);
+        }
     }
 }

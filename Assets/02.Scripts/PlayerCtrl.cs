@@ -19,6 +19,7 @@ public class PlayerCtrl : MonoBehaviour
         v = Input.GetAxis("Vertical");  // Up/Down  -1.0f ~ 0.0f ~ +1.0f
         Debug.Log("v=" + v);
 
-        transform.position += new Vector3(0, 0, 0.01f);
+        // transform.position += new Vector3(0, 0, 0.01f);
+        transform.Translate(Vector3.forward * 0.01f);
     }
 }

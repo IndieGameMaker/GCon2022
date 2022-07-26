@@ -43,6 +43,7 @@ public class PlayerCtrl : MonoBehaviour
         PlayerAnimation();
     }
 
+
     void PlayerAnimation()
     {
         if (v >= 0.1f)              // 전진

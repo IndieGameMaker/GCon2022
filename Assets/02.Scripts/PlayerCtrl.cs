@@ -19,17 +19,9 @@ public class PlayerCtrl : MonoBehaviour
         v = Input.GetAxis("Vertical");   // Up/Down     -1.0f ~ 0.0f ~ +1.0f
         h = Input.GetAxis("Horizontal"); // Left/Right  -1.0f ~ 0.0f ~ +1.0f
 
-        // transform.position += new Vector3(0, 0, 0.01f);
-        transform.Translate(Vector3.forward * v * 0.01f);
-        transform.Translate(Vector3.right * h * 0.01f);
+        // 벡터의 덧셈 연산
+        Vector3 moveDir = (Vector3.forward * v) + (Vector3.right * h);
 
-        /*
-            Vector3.forward = Vector3(0, 0, 1)
-            Vector3.up      = Vector3(0, 1, 0)
-            Vector3.right   = Vector3(1, 0, 0)
-
-            Vector3.one = Vector3(1, 1, 1)
-            Vector3.zero = Vector3(0, 0, 0)
-        */
+        transform.Translate(moveDir * 0.01f);
     }
 }

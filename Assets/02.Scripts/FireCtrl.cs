@@ -1,3 +1,5 @@
+#pragma warning disable CS0108, IDE0052, IDE0051
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,7 +14,7 @@ public class FireCtrl : MonoBehaviour
 
     void Start()
     {
-        audio = GetComponent<AudioSource>();
+        audio = this.gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -20,9 +22,16 @@ public class FireCtrl : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            // Instantiate(생성할 객체, 좌표, 각도)
-            Instantiate(bulletPrefab, firePos.position, firePos.rotation);
+            Fire();
         }
+    }
+
+    void Fire()
+    {
+        // Instantiate(생성할 객체, 좌표, 각도)
+        Instantiate(bulletPrefab, firePos.position, firePos.rotation);
+        // 총소리 발생
+        audio.PlayOneShot(fireSfx, 0.8f);
     }
 }
 

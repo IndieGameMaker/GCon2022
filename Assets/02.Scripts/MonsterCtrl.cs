@@ -26,6 +26,7 @@ public class MonsterCtrl : MonoBehaviour
     private Transform playerTr;
 
     private NavMeshAgent agent;
+    private Animator anim;
 
     // 몬스터의 사망여부
     public bool isDie = false;
@@ -34,6 +35,7 @@ public class MonsterCtrl : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        anim = GetComponent<Animator>();
         monsterTr = GetComponent<Transform>(); // monsterTr = transform;
 
         // GameObject playerObj = GameObject.FindGameObjectWithTag("PLAYER");

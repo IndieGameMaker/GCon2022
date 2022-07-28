@@ -43,6 +43,11 @@ public class FireCtrl : MonoBehaviour
 
     IEnumerator ShowMuzzleFlash()
     {
+        // Texture Offset 변경
+        // (0, 0) , (0.5, 0), (0.5, 0.5), (0, 0.5)
+        Vector2 offset = new Vector2(Random.Range(0, 2) * 0.5f, Random.Range(0, 2) * 0.5f);
+        muzzleFlash.material.mainTextureOffset = offset;
+
         // Muzzle 활성화
         muzzleFlash.enabled = true;
 

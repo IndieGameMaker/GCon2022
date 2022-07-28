@@ -8,6 +8,7 @@ public class FireCtrl : MonoBehaviour
     public Transform firePos;
 
     private AudioSource audio;
+    public AudioClip fireSfx;
 
     // Update is called once per frame
     void Update()

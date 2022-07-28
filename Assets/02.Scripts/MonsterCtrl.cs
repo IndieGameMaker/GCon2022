@@ -46,6 +46,7 @@ public class MonsterCtrl : MonoBehaviour
         playerTr = GameObject.FindGameObjectWithTag("PLAYER")?.GetComponent<Transform>();
 
         StartCoroutine(CheckMonsterState());
+        StartCoroutine(MonsterAction());
     }
 
     // 몬스터의 상태를 측정하는 코루틴
@@ -82,9 +83,12 @@ public class MonsterCtrl : MonoBehaviour
             switch (state)
             {
                 case State.IDLE:
+                    agent.isStopped = true;
                     break;
 
                 case State.TRACE:
+                    agent.SetDestination(playerTr.position);
+                    agent.isStopped = false;
                     break;
 
                 case State.ATTACK:

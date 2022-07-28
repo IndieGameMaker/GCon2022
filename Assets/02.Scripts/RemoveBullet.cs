@@ -19,10 +19,23 @@ public class RemoveBullet : MonoBehaviour
             Vector3 _point = cp.point;
             // 법선 벡터
             Vector3 _normal = -cp.normal;
+            // 벡터를 Quaternion 타입으로 변환
+            Quaternion rot = Quaternion.LookRotation(_normal);
 
-
+            Instantiate(sparkEffect, _point, rot);
         }
     }
+    /*
+        Quaternion (쿼터니언 , 사원수) -> x, y, z, w
+        짐벌락(Gimbal Lock : 김벌락)
+
+        Quaternion.Euler(0, 45, 30)
+        Quaternion.LookRotation(벡터)
+        오일러 회전 (Euler Rotation) x -> y -> z
+    
+    */
+
+
 
     /*
         충돌 콜백함수 (Collision CallBack Function)

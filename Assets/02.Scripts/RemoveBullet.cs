@@ -22,7 +22,8 @@ public class RemoveBullet : MonoBehaviour
             // 벡터를 Quaternion 타입으로 변환
             Quaternion rot = Quaternion.LookRotation(_normal);
 
-            Instantiate(sparkEffect, _point, rot);
+            GameObject spark = Instantiate(sparkEffect, _point, rot);
+            Destroy(spark, 0.4f);
         }
     }
     /*

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class MonsterCtrl : MonoBehaviour
 {
@@ -24,12 +25,15 @@ public class MonsterCtrl : MonoBehaviour
     [SerializeField]
     private Transform playerTr;
 
+    private NavMeshAgent agent;
+
     // 몬스터의 사망여부
     public bool isDie = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        agent = GetComponent<NavMeshAgent>();
         monsterTr = GetComponent<Transform>(); // monsterTr = transform;
 
         // GameObject playerObj = GameObject.FindGameObjectWithTag("PLAYER");
@@ -42,6 +46,11 @@ public class MonsterCtrl : MonoBehaviour
         playerTr = GameObject.FindGameObjectWithTag("PLAYER")?.GetComponent<Transform>();
 
         StartCoroutine(CheckMonsterState());
+    }
+
+    void Update()
+    {
+
     }
 
     // 몬스터의 상태를 측정하는 코루틴

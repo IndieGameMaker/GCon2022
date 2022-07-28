@@ -50,7 +50,7 @@ public class MonsterCtrl : MonoBehaviour
 
     void Update()
     {
-
+        agent.SetDestination(playerTr.position);
     }
 
     // 몬스터의 상태를 측정하는 코루틴

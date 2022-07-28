@@ -53,6 +53,10 @@ public class FireCtrl : MonoBehaviour
         muzzleFlash.transform.localRotation = Quaternion.Euler(Vector3.forward * angle);
         //muzzleFlash.transform.localRotation = Quaternion.Euler(0, 0, angle);
 
+        // Texture Scale 변경
+        float scale = Random.Range(1.0f, 2.5f);
+        muzzleFlash.transform.localScale = Vector3.one * scale;
+        //muzzleFlash.transform.localScale = new Vector3(scale, scale, scale);
 
         // Muzzle 활성화
         muzzleFlash.enabled = true;

@@ -19,6 +19,7 @@ public class FireCtrl : MonoBehaviour
     {
         audio = this.gameObject.GetComponent<AudioSource>();
         muzzleFlash = firePos.GetComponentInChildren<MeshRenderer>();
+        muzzleFlash.enabled = false;
     }
 
     // Update is called once per frame

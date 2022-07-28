@@ -260,6 +260,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 4541436850913177543, guid: 58b114c4d64b648be9c94e0e8311bf21, type: 3}
   firePos: {fileID: 1964288336}
   fireSfx: {fileID: 8300000, guid: 3988c7241ff434c2a900f22726ee7a08, type: 3}
+  muzzleFlash: {fileID: 0}
 --- !u!82 &189075046
 AudioSource:
   m_ObjectHideFlags: 0

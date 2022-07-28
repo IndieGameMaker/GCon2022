@@ -48,11 +48,6 @@ public class MonsterCtrl : MonoBehaviour
         StartCoroutine(CheckMonsterState());
     }
 
-    void Update()
-    {
-        agent.SetDestination(playerTr.position);
-    }
-
     // 몬스터의 상태를 측정하는 코루틴
     IEnumerator CheckMonsterState()
     {
@@ -79,8 +74,27 @@ public class MonsterCtrl : MonoBehaviour
         }
     }
 
-
-
     // 몬스터의 상태에 따른 행동을 처리하는 코루틴
+    IEnumerator MonsterAction()
+    {
+        while (!isDie)
+        {
+            switch (state)
+            {
+                case State.IDLE:
+                    break;
+
+                case State.TRACE:
+                    break;
+
+                case State.ATTACK:
+                    break;
+
+                case State.DIE:
+                    break;
+            }
+            yield return new WaitForSeconds(0.3f);
+        }
+    }
 
 }

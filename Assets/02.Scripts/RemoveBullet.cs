@@ -4,12 +4,23 @@ using UnityEngine;
 
 public class RemoveBullet : MonoBehaviour
 {
+    public GameObject sparkEffect;
+
     void OnCollisionEnter(Collision coll)
     {
         if (coll.gameObject.tag == "BULLET")
         {
             // 충돌한 게임오브젝트(총알)을 삭제
             Destroy(coll.gameObject);
+
+            // 충돌 정보를 저장 (첫번째 충돌정보)
+            ContactPoint cp = coll.GetContact(0);
+            // 충돌 좌표
+            Vector3 _point = cp.point;
+            // 법선 벡터
+            Vector3 _normal = -cp.normal;
+
+
         }
     }
 

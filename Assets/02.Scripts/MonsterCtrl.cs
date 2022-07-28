@@ -24,22 +24,27 @@ public class MonsterCtrl : MonoBehaviour
     [SerializeField]
     private Transform playerTr;
 
+    // 몬스터의 사망여부
+    public bool isDie = false;
+
     // Start is called before the first frame update
     void Start()
     {
         monsterTr = GetComponent<Transform>(); // monsterTr = transform;
 
-        GameObject playerObj = GameObject.FindGameObjectWithTag("PLAYER");
-        if (playerObj != null)
-        {
-            playerTr = playerObj.GetComponent<Transform>();
-            // playerTr = playerObj.transform;
-        }
-    }
+        // GameObject playerObj = GameObject.FindGameObjectWithTag("PLAYER");
+        // if (playerObj != null)
+        // {
+        //     playerTr = playerObj.GetComponent<Transform>();
+        //     // playerTr = playerObj.transform;
+        // }
 
-    // Update is called once per frame
-    void Update()
-    {
+        playerTr = GameObject.FindGameObjectWithTag("PLAYER")?.GetComponent<Transform>();
 
     }
+
+    // 몬스터의 상태를 측정하는 코루틴
+
+    // 몬스터의 상태에 따른 행동을 처리하는 코루틴
+
 }

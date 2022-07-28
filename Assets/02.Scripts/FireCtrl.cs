@@ -37,6 +37,20 @@ public class FireCtrl : MonoBehaviour
         Instantiate(bulletPrefab, firePos.position, firePos.rotation);
         // 총소리 발생
         audio.PlayOneShot(fireSfx, 0.8f);
+
+        StartCoroutine(ShowMuzzleFlash());
+    }
+
+    IEnumerator ShowMuzzleFlash()
+    {
+        // Muzzle 활성화
+        muzzleFlash.enabled = true;
+
+        // Waiting ... / Sleep
+        yield return new WaitForSeconds(0.3f);
+
+        // Muzzle 비활성화
+        muzzleFlash.enabled = false;
     }
 }
 
@@ -46,3 +60,7 @@ public class FireCtrl : MonoBehaviour
     AudioSource  -> n
 */
 
+/*
+    Co-routine 코루틴
+
+*/

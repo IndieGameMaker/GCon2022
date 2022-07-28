@@ -27,7 +27,14 @@ public class MonsterCtrl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        monsterTr = GetComponent<Transform>(); // monsterTr = transform;
 
+        GameObject playerObj = GameObject.FindGameObjectWithTag("PLAYER");
+        if (playerObj != null)
+        {
+            playerTr = playerObj.GetComponent<Transform>();
+            // playerTr = playerObj.transform;
+        }
     }
 
     // Update is called once per frame

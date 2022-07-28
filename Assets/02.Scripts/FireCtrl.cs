@@ -10,6 +10,11 @@ public class FireCtrl : MonoBehaviour
     private AudioSource audio;
     public AudioClip fireSfx;
 
+    void Start()
+    {
+        audio = GetComponent<AudioSource>();
+    }
+
     // Update is called once per frame
     void Update()
     {
